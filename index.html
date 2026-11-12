@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio of Patel David Sanchez, a computing student at KCAU.">
+  <title>Patel David Sanchez | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Literata:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="#home">PDS</a>
+  <nav aria-label="Main navigation">
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <p class="hello">Hi, I’m</p>
+      <h1>Patel David Sanchez</h1>
+      <p class="lead">I’m a computing student at KCAU. I build small web projects, and I’m aiming for a first class.</p>
+      <p>
+        <a class="btn" href="#projects">See my projects</a>
+        <a class="btn btn-outline" href="#contact">Get in touch</a>
+      </p>
+    </div>
+    <img class="profile-pic" src="images/profile.svg" alt="Profile picture of Patel David Sanchez" width="320" height="320">
+  </section>
+
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <div class="two-col">
+      <div>
+        <h3>Education</h3>
+        <p>I study at <a href="https://www.kcau.ac.ke" target="_blank" rel="noopener">KCA University (KCAU)</a>. These are some of the units I’m taking:</p>
+        <table class="units">
+          <caption>Units this semester</caption>
+          <thead>
+            <tr><th scope="col">Code</th><th scope="col">Unit</th><th scope="col">What it covers</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>CPP 1101</td><td>Fundamentals of Computer Systems</td><td>How a computer boots and runs</td></tr>
+            <tr><td>MAT 1102</td><td>Discrete Mathematics</td><td>Sets, Venn diagrams, logic</td></tr>
+            <tr><td>-</td><td>Computing Mathematics</td><td>Quadratics, inequalities, polynomials</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <h3>Personal interests</h3>
+        <ul class="plain-list">
+          <li>Building websites and web apps</li>
+          <li>Solving maths problems</li>
+          <li>Learning how computers work inside</li>
+          <li>Healthcare technology</li>
+        </ul>
+        <h3>How I start a project</h3>
+        <ol>
+          <li>Write down what the user needs.</li>
+          <li>Sketch the pages.</li>
+          <li>Build it in HTML and CSS.</li>
+          <li>Test it, then save it on GitHub.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <ul class="skill-grid">
+      <li class="skill"><strong>HTML5</strong><span>Semantic pages, forms, tables</span></li>
+      <li class="skill"><strong>CSS3</strong><span>Flexbox, Grid, responsive layouts</span></li>
+      <li class="skill"><strong>Git and GitHub</strong><span>Commits, repositories, GitHub Pages</span></li>
+      <li class="skill"><strong>Discrete Mathematics</strong><span>Set theory and logic</span></li>
+      <li class="skill"><strong>Computer Systems</strong><span>Booting, BIOS, UEFI, hardware basics</span></li>
+      <li class="skill"><strong>Problem solving</strong><span>Breaking big tasks into steps</span></li>
+    </ul>
+  </section>
+
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <article class="project">
+        <img src="images/project-online-pharmacy.svg" alt="AliMedix Online Pharmacy storefront preview" width="400" height="220">
+        <h3>AliMedix Online Pharmacy</h3>
+        <p class="tag">Completed prototype</p>
+        <p>A pharmacy storefront where customers browse medicines and place orders. Built with HTML.</p>
+      </article>
+      <article class="project">
+        <img src="images/project-pharmacy-pos.svg" alt="AliMedix Pharmacy POS preview" width="400" height="220">
+        <h3>AliMedix Pharmacy POS</h3>
+        <p class="tag">Completed prototype</p>
+        <p>A point-of-sale screen for pharmacy staff to ring up sales quickly. Built with HTML.</p>
+      </article>
+      <article class="project">
+        <img src="images/project-study-planner.svg" alt="Study Planner concept preview" width="400" height="220">
+        <h3>KCAU Study Planner</h3>
+        <p class="tag">Proposed</p>
+        <p>A simple planner that lists units, deadlines and assignments so nothing is missed.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email me at <a href="mailto:patelsanchez3208@gmail.com">patelsanchez3208@gmail.com</a> or use the form.</p>
+    <form class="contact-form" action="mailto:patelsanchez3208@gmail.com" method="post" enctype="text/plain">
+      <label for="name">Your name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Your email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="topic">Topic</label>
+      <select id="topic" name="topic">
+        <option>General question</option>
+        <option>Project idea</option>
+        <option>Collaboration</option>
+      </select>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button class="btn" type="submit">Send message</button>
+    </form>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>© 2026 Patel David Sanchez. Built with HTML and CSS, hosted on GitHub Pages.</p>
+</footer>
+
+</body>
+</html>
