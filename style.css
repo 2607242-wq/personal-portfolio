@@ -1,0 +1,130 @@
+/* ---------- Tokens ---------- */
+:root {
+  --night: #1b1f3b;
+  --gold: #e9a23b;
+  --chalk: #f6f4ee;
+  --acacia: #2f6f5e;
+  --ink: #23263a;
+  --line: #d9d4c7;
+  --head: "Bricolage Grotesque", "Segoe UI", Arial, sans-serif;
+  --body: "Literata", Georgia, serif;
+}
+
+/* ---------- Base ---------- */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+body {
+  margin: 0;
+  background: var(--chalk);
+  color: var(--ink);
+  font-family: var(--body);
+  line-height: 1.7;
+}
+h1, h2, h3 { font-family: var(--head); line-height: 1.15; margin: 0 0 .6rem; }
+h2 { font-size: 2rem; color: var(--night); border-bottom: 3px solid var(--gold); display: inline-block; padding-bottom: .2rem; margin-bottom: 1.5rem; }
+h3 { font-size: 1.2rem; color: var(--acacia); }
+p { margin: 0 0 1rem; max-width: 62ch; }
+a { color: var(--acacia); }
+img { max-width: 100%; height: auto; display: block; }
+
+/* ---------- Header and navigation ---------- */
+.site-header {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: .8rem 2rem;
+  background: var(--night);
+}
+.brand { font-family: var(--head); font-weight: 800; font-size: 1.4rem; color: var(--gold); text-decoration: none; }
+.nav-links { display: flex; gap: .4rem; list-style: none; margin: 0; padding: 0; }
+.nav-links a {
+  display: block; padding: .45rem .9rem; border-radius: 6px;
+  font-family: var(--head); font-weight: 500;
+  color: var(--chalk); text-decoration: none;
+  transition: background .2s, color .2s;
+}
+.nav-links a:hover, .nav-links a:focus-visible { background: var(--gold); color: var(--night); }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: flex; align-items: center; justify-content: space-between; gap: 2rem;
+  max-width: 1050px; margin: 0 auto; padding: 4rem 2rem;
+}
+.hello { font-family: var(--head); font-size: 1.2rem; color: var(--acacia); margin-bottom: .2rem; }
+#home h1 { font-size: clamp(2.4rem, 7vw, 4.6rem); font-weight: 800; color: var(--night); }
+.lead { font-size: 1.2rem; }
+.profile-pic {
+  width: 300px; height: 300px; flex-shrink: 0;
+  object-fit: cover;
+  border: 6px solid var(--gold);
+  border-radius: 150px 150px 24px 24px;   /* arch shape */
+  background: var(--night);
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block; padding: .7rem 1.4rem; margin: 0 .5rem .5rem 0;
+  font-family: var(--head); font-weight: 700; font-size: 1rem;
+  background: var(--night); color: var(--chalk);
+  border: 2px solid var(--night); border-radius: 8px;
+  text-decoration: none; cursor: pointer;
+  transition: background .2s, color .2s, transform .2s;
+}
+.btn:hover, .btn:focus-visible { background: var(--gold); border-color: var(--gold); color: var(--night); transform: translateY(-2px); }
+.btn-outline { background: transparent; color: var(--night); }
+
+/* ---------- Sections ---------- */
+.section { max-width: 1050px; margin: 0 auto; padding: 3rem 2rem; }
+.two-col { display: flex; gap: 3rem; flex-wrap: wrap; }
+.two-col > div { flex: 1 1 320px; }
+.plain-list { padding-left: 1.2rem; }
+
+/* ---------- Table ---------- */
+.units { width: 100%; border-collapse: collapse; font-size: .95rem; background: #fff; }
+.units caption { text-align: left; font-family: var(--head); font-weight: 700; padding-bottom: .4rem; }
+.units th, .units td { border: 1px solid var(--line); padding: .55rem .7rem; text-align: left; }
+.units th { background: var(--night); color: var(--chalk); font-family: var(--head); }
+
+/* ---------- Skills ---------- */
+.skill-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;
+  list-style: none; margin: 0; padding: 0;
+}
+.skill { padding: 1rem 1.2rem; background: #fff; border: 1px solid var(--line); border-left: 6px solid var(--acacia); border-radius: 6px; }
+.skill strong { display: block; font-family: var(--head); font-size: 1.1rem; color: var(--night); }
+.skill span { font-size: .95rem; }
+
+/* ---------- Projects ---------- */
+.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+.project { background: #fff; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; padding-bottom: 1rem; transition: transform .2s; }
+.project:hover { transform: translateY(-4px); }
+.project h3, .project p { margin-left: 1.1rem; margin-right: 1.1rem; }
+.project h3 { margin-top: 1rem; }
+.tag { display: inline-block; padding: .1rem .6rem; background: var(--gold); color: var(--night); font-family: var(--head); font-size: .85rem; font-weight: 700; border-radius: 99px; }
+
+/* ---------- Contact form ---------- */
+.contact-form { display: flex; flex-direction: column; gap: .4rem; max-width: 520px; padding: 1.5rem; background: #fff; border: 1px solid var(--line); border-radius: 12px; }
+.contact-form label { font-family: var(--head); font-weight: 700; margin-top: .5rem; }
+.contact-form input, .contact-form select, .contact-form textarea {
+  padding: .6rem .7rem; font: inherit; border: 2px solid var(--line); border-radius: 6px; background: var(--chalk);
+}
+.contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { outline: none; border-color: var(--acacia); }
+.contact-form .btn { margin-top: 1rem; align-self: flex-start; }
+
+/* ---------- Footer ---------- */
+.site-footer { margin-top: 3rem; padding: 1.5rem 2rem; background: var(--night); color: var(--chalk); text-align: center; }
+.site-footer p { margin: 0 auto; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 760px) {
+  .site-header { flex-direction: column; gap: .5rem; padding: .6rem 1rem; }
+  .nav-links { flex-wrap: wrap; justify-content: center; }
+  .hero { flex-direction: column-reverse; text-align: center; padding: 2rem 1.2rem; }
+  .hero p { margin-left: auto; margin-right: auto; }
+  .profile-pic { width: 220px; height: 220px; border-radius: 110px 110px 20px 20px; }
+  .section { padding: 2rem 1.2rem; }
+  html { scroll-padding-top: 8rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
